@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lista de tarefas</title>
+<link rel="stylesheet" type="text/css" href="ListaTarefa.css">
+</head>
+<body>
+<div class="header">
+<h2>Lista de tarefas</h2>
+<input type="text" id="tarefa" placeholder="Informe a tarefa">
+<span onclick="addElemento()" class="addBtn">Incluir</span>
+<span onclick="deleteAll()" class="delBtn">Limpar Lista</span>
+<span onclick="marcaAll()" class="marcaBtn">Marcar Todos</span>
+</div>
+<ul id="itemLista">
+<li class="checked">01/01/0001 Tomar café</li>
+<li> 01/01/0001 Fazer compras</li>
+<li> 02/01/0001 Entregar atividade no moodle</li>
+</ul>
+<script src="ListaTarefa.js"></script>
+</body>
+</html>

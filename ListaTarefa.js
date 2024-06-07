@@ -1,3 +1,10 @@
+localStorage.clear();
+
+localStorage.setItem('ID1','1');
+localStorage.setItem('ID2','2');
+localStorage.setItem('ID3','3');
+
+
 let myNodelist = document.getElementsByTagName("li");
 for (let i = 0; i < myNodelist.length; i++) {
 let span = document.createElement("span");
@@ -11,6 +18,7 @@ let close = document.getElementsByClassName("close");
 for (let i = 0; i < close.length; i++) {
 close[i].onclick = function() {
 let div = this.parentElement;
+localStorage.removeItem('ID1');
 div.style.display = "none";
 }
 }
@@ -52,11 +60,12 @@ div.style.display = "none";
 }
 
 function marcaAll(){
-let div = document.querySelectorAll("li");
-div.forEach(div.classList.toggle('checked'));
+let div = querySelectorAll("li");
+div.addClass('checked');
 }
 
 const date = new Date();
 const year = date.getFullYear();
 const month = String(date.getMonth() + 1).padStart(2, '0');
 const day = String(date.getDate()).padStart(2, '0');
+
